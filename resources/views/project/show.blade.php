@@ -1,7 +1,7 @@
 @extends('layout')
 
 @section('content')
-{{dd($project['relationships']->todos)}}
+{{dd($project['relationships']->todos->data)}}
     <section class='todolist'>
         @foreach($project['relationships']->todos->data as $todo)
             <form action='/project/{{$project->id}}/todo/{{$todo->id}}'>
