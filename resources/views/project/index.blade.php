@@ -3,7 +3,7 @@
 @section('content')
     <section class='projectlist'>
         @foreach($projects as $project)
-            {{dd($project['server'])}}
+            {{dd($project->server)}}
         @endforeach
         {{-- @foreach($projects['data'] as $project => $a)
             {{dd($project)}}
