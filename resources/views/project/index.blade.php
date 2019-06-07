@@ -20,11 +20,11 @@
 
 
 
-            {{dd($project->server)}}
+            {{-- {{dd($project->server)}}
             {{dd($project->type)}}
             {{dd($project->id)}}
             {{dd($project->attributes->title)}}
-            {{dd($project->attributes->body)}}
+            {{dd($project->attributes->body)}} --}}
         @endforeach
         {{-- <a href='/project/id' style='background-color: #e74c3c;'>
             <div class='left'>
