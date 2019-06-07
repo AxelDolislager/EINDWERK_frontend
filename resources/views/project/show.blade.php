@@ -1,9 +1,9 @@
 @extends('layout')
 
 @section('content')
-{{dd($project['relationships'])}}
+{{dd($project['relationships']->todos)}}
     <section class='todolist'>
-        @foreach($project->relationships->todos->data as $todo)
+        @foreach($project['relationships']->todos->data as $todo)
             <form action='/project/{{$project->id}}/todo/{{$todo->id}}'>
                 @csrf
                 @method('PUT')
