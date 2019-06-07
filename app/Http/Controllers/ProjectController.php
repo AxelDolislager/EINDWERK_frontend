@@ -10,6 +10,9 @@ class ProjectController extends Controller{
         $client = new Client(['base_uri' => 'http://backend.eindwerk.local/api/']);
         $response = $client->request('GET', 'projects');
 
+        dd($response->getBody());
+        // dd($response->getBody()->getContents());
+
         return view('project.index', [
             "projects" => $response->getBody()->getContents()
         ]);
