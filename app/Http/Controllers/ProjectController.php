@@ -12,9 +12,6 @@ class ProjectController extends Controller{
 
         $projects = (array)json_decode($response->getBody()->getContents());
 
-        // dd($response->getBody());
-        // dd($projects['data']);
-
         return view('project.index', [
             "projects" => $projects['data']
         ]);
@@ -25,13 +22,18 @@ class ProjectController extends Controller{
             "previous_page" => "/"
         ]);
     }
-    public function store(Request $request){
-
-    }
+    public function store(Request $request){}
     public function show($id){
+        $client = new Client(['base_uri' => 'http://backend.eindwerk.local/api/']);
+        $response = $client->request('GET', 'projects/' . $id);
+
+        $project = (array)json_decode($response->getBody()->getContents());
+        dd($project);
+
         return view('project.show', [
             "title" =>  "Project",
-            "previous_page" => "/"
+            "previous_page" => "/",
+            "project" => $project
         ]);
     }
     public function edit($id){}
