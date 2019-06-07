@@ -30,7 +30,7 @@ class ProjectController extends Controller{
         $project = (array)json_decode($response->getBody()->getContents());
 
         return view('project.show', [
-            "pagetitle" =>  $project->attributes->title,
+            "pagetitle" =>  $project['attributes']->title,
             "previous_page" => "/",
             "project" => $project
         ]);
