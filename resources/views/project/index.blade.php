@@ -2,6 +2,9 @@
 
 @section('content')
     <section class='projectlist'>
+        @foreach($projects->data as $project)
+            {{$project->id}}
+        @endforeach
         <a href='/project/id' style='background-color: #e74c3c;'>
             <div class='left'>
                 <span class='projecttitle'>Project 1</span>
@@ -35,8 +38,4 @@
     <div class='bottomaddoverlay'>
         <a href='/project/create' class='addbutton'><i class='fal fa-plus'></i></a>
     </div>
-
-    <script>
-        console.log({{$projects}});
-    </script>
 @endsection

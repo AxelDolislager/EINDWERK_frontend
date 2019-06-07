@@ -11,7 +11,7 @@ class ProjectController extends Controller{
         $response = $client->request('GET', 'projects');
 
         // dd($response->getBody());
-        dd($response->getBody()->getContents());
+        // dd($response->getBody()->getContents());
 
         return view('project.index', [
             "projects" => $response->getBody()->getContents()
