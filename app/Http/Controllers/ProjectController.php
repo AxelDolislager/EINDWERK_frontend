@@ -7,8 +7,8 @@ use GuzzleHttp\Client;
 
 class ProjectController extends Controller{
     public function index(){
-        $client = new Client(['base_uri' => 'http://backend.eindwerk.local/api']);
-        $response = $client->request('GET', 'project');
+        $client = new Client(['base_uri' => 'http://backend.eindwerk.local/api/']);
+        $response = $client->request('GET', 'projects');
         return json_encode($response);
 
         // return view('project.index', [
