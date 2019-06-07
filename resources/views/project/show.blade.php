@@ -3,7 +3,7 @@
 @section('content')
     <section class='todolist'>
         @foreach($project['relationships']->todos->data as $todo)
-            <form action='/project/{{$project['id']}}/todo/{{$todo->id}}'>
+            <form action='/project/{{$project['id']}}/todo/{{$todo->id}}' method='post' class='todo' onclick="$(this).submit();">
                 @csrf
                 @method('PUT')
                 <span class='todobody'>Test</span>
