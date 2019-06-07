@@ -16,7 +16,7 @@ class ProjectController extends Controller{
         // dd($projects['data']);
 
         return view('project.index', [
-            "projects" => json_decode($projects['data'])
+            "projects" => $projects['data']
         ]);
     }
     public function create(){
