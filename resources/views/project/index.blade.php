@@ -2,7 +2,9 @@
 
 @section('content')
     <section class='projectlist'>
-        {{dd($projects)}}
+        @foreach($projects as $project)
+            {{dd($project)}}
+        @endforeach
         {{-- @foreach($projects['data'] as $project => $a)
             {{dd($project)}}
             {{dd($a)}}
