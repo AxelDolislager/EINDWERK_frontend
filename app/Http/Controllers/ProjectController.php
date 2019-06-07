@@ -13,7 +13,8 @@ class ProjectController extends Controller{
         $projects = (array)json_decode($response->getBody()->getContents());
 
         return view('project.index', [
-            "projects" => $projects['data']
+            "projects" => $projects['data'],
+            "previous_page" => "/"
         ]);
     }
     public function create(){
