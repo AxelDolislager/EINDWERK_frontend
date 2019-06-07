@@ -4,7 +4,7 @@
 {{-- {{dd($project['relationships']->todos->data)}} --}}
     <section class='todolist'>
         @foreach($project['relationships']->todos->data as $todo)
-            <form action='/project//todo/{{$todo->id}}'>
+            <form action='/project/{{$project['id']}}/todo/{{$todo->id}}'>
                 @csrf
                 @method('PUT')
                 <span class='todobody'>Test</span>
