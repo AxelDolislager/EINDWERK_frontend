@@ -13,7 +13,7 @@ header span.nothing{width: 50px;height: 50px;display: block;margin: auto auto au
 header .pagetitle{display: block;margin: auto auto auto -50px;font-size: 1.2rem;font-weight: 300;color: #272727;}
 
 .projectlist{width: 100%;height: calc(100% - 50px);overflow-y: scroll;padding: 5px 0px;-ms-overflow-style: none;scrollbar-width: none;}
-.projectlist::-webkit-scrollbar{display: none; }
+.projectlist::-webkit-scrollbar{display: none;}
 .projectlist a{display: flex;padding: 10px 20px;width: 100%;height: 100px;text-decoration: none;color: white;}
 .projectlist a .left{width: 60%;margin: auto;}
 .projectlist a .left .projecttitle{margin-top: 30px;display: block;font-weight: 700;font-size: 1.2rem;}
@@ -23,7 +23,8 @@ header .pagetitle{display: block;margin: auto auto auto -50px;font-size: 1.2rem;
 .projectlist a .right .projectdate b{display: inline-block;}
 .projectlist a .right .projectdate .projectdatevalue{font-weight: 300;}
 
-.todolist{width: 100%;height: calc(100% - 50px);overflow-y: scroll;padding: 0px 20px;font-weight: 300;}
+.todolist{width: 100%;height: calc(100% - 50px);overflow-y: scroll;padding: 0px 20px;font-weight: 300;-ms-overflow-style: none;scrollbar-width: none;}
+.todolist::-webkit-scrollbar{display: none;}
 .todolist .todo{display: flex;cursor: pointer;width: 100%;padding: 10px 20px;margin: 15px 0px;background-color: white;border-radius: 20px;-webkit-box-shadow: 0px 0px 6px 0px rgba(0,0,0,0.15);-moz-box-shadow: 0px 0px 6px 0px rgba(0,0,0,0.15);box-shadow: 0px 0px 6px 0px rgba(0,0,0,0.15);}
 .todolist .todo .todobody{color: #272727;margin: auto auto auto 0px;}
 .todolist .todo .todocircle{display: flex;margin: auto 0px auto auto;width: 20px;height: 20px;border-radius: 100%;-webkit-box-shadow: 0px 0px 6px 0px rgba(0,0,0,0.15);-moz-box-shadow: 0px 0px 6px 0px rgba(0,0,0,0.15);box-shadow: 0px 0px 6px 0px rgba(0,0,0,0.15);}
@@ -35,13 +36,15 @@ header .pagetitle{display: block;margin: auto auto auto -50px;font-size: 1.2rem;
 .bottomaddoverlay a.addbutton{display: flex;width: 80px;height: 80px;background-color: #5DA2FF;border-radius: 100%;margin: -20px auto auto auto;text-decoration: none;-webkit-box-shadow: 0px 0px 6px 0px rgba(0,0,0,0.3);-moz-box-shadow: 0px 0px 6px 0px rgba(0,0,0,0.3);box-shadow: 0px 0px 6px 0px rgba(0,0,0,0.3);}
 .bottomaddoverlay a.addbutton i{display: block;color: white;font-size: 2.5rem;color: white;margin: auto;}
 
-.createproject{width: 100%;height: calc(100% - 50px);overflow-y: scroll;padding: 5px 20px;}
+.createproject{width: 100%;height: calc(100% - 50px);overflow-y: scroll;padding: 5px 20px;-ms-overflow-style: none;scrollbar-width: none;}
+.createproject::-webkit-scrollbar{display: none;}
 .createproject form{width: 100%;}
 .createproject h4{margin-bottom: 15px;font-weight: 400;}
 .createproject form .input{display: block;width: 100%;height: 40px;margin-bottom: 15px;color: #9A9A9A;background-color: white;border: none;border-radius: 5px;font-family: SourceSansPro;font-weight: 300;font-size: 1rem;padding: 0px 20px;line-height: 40px;-webkit-box-shadow: 0px 0px 6px 0px rgba(0,0,0,0.3);-moz-box-shadow: 0px 0px 6px 0px rgba(0,0,0,0.3);box-shadow: 0px 0px 6px 0px rgba(0,0,0,0.3);}
 .createproject form #submit{display: block;width: 100%;border: none;color: white;background-color: #3BDCBF;padding: 10px 0px;border-radius: 5px;font-family: SourceSansPro;font-weight: 300;font-size: 1rem;cursor: pointer;}
 
-.createtodo{width: 100%;height: calc(100% - 50px);overflow-y: scroll;padding: 5px 20px;}
+.createtodo{width: 100%;height: calc(100% - 50px);overflow-y: scroll;padding: 5px 20px;-ms-overflow-style: none;scrollbar-width: none;}
+.createtodo::-webkit-scrollbar{display: none;}
 .createtodo form{width: 100%;}
 .createtodo h4{margin-bottom: 15px;font-weight: 400;}
 .createtodo form .input{display: block;width: 100%;height: 40px;margin-bottom: 15px;color: #9A9A9A;background-color: white;border: none;border-radius: 5px;font-family: SourceSansPro;font-weight: 300;font-size: 1rem;padding: 0px 20px;line-height: 40px;-webkit-box-shadow: 0px 0px 6px 0px rgba(0,0,0,0.3);-moz-box-shadow: 0px 0px 6px 0px rgba(0,0,0,0.3);box-shadow: 0px 0px 6px 0px rgba(0,0,0,0.3);}
