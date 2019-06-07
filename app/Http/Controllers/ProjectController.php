@@ -10,11 +10,13 @@ class ProjectController extends Controller{
         $client = new Client(['base_uri' => 'http://backend.eindwerk.local/api/']);
         $response = $client->request('GET', 'projects');
 
+        $projects = (array)json_decode($response->getBody()->getContents());
+
         // dd($response->getBody());
-        // dd($response->getBody()->getContents());
+        dd($projects);
 
         return view('project.index', [
-            "projects" => $response->getBody()->getContents()
+            "projects" => $projects
         ]);
     }
     public function create(){
