@@ -2,7 +2,7 @@
 
 @section('content')
     <section class='todolist'>
-        @foreach($project->relations->todos->data as $todo)
+        @foreach($project->relationships->todos->data as $todo)
             <form action='/project/{{$project->id}}/todo/{{$todo->id}}'>
                 @csrf
                 @method('PUT')
