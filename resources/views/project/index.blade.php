@@ -35,4 +35,8 @@
     <div class='bottomaddoverlay'>
         <a href='/project/create' class='addbutton'><i class='fal fa-plus'></i></a>
     </div>
+
+    <script>
+        console.log({{$projects}});
+    </script>
 @endsection
