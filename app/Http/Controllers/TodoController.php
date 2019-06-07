@@ -8,7 +8,7 @@ class TodoController extends Controller{
     public function index(){}
     public function create($projectid){
         return view('todo.create', [
-            "title" =>  "Nieuwe taak aanmaken",
+            "pagetitle" =>  "Nieuwe taak aanmaken",
             "previous_page" => "/project/$projectid"
         ]);
     }

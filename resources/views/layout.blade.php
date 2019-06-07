@@ -10,9 +10,9 @@
     <body>
         <main>
             <header>
-                @if(isset($project))
+                @if(isset($pagetitle))
                     <a href="{{$previous_page}}" class='arrowback'><i class='fa fa-chevron-left'></i></a>
-                    <span class='pagetitle'>{{ $project->attributes->title }}</span>
+                    <span class='pagetitle'>{{ $pagetitle }}</span>
                 @else
                     <span class='nothing'></span>
                     <span class='pagetitle'>eindwerk.todo</span>
