@@ -10,7 +10,7 @@
     <body>
         <main>
             <header>
-                @if(isset($project->title))
+                @if(isset($project['title']))
                     <a href="{{$previous_page}}" class='arrowback'><i class='fa fa-chevron-left'></i></a>
                     <span class='pagetitle'>{{ $project->title }}</span>
                 @else
