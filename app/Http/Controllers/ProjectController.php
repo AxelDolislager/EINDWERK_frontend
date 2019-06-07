@@ -28,7 +28,6 @@ class ProjectController extends Controller{
         $response = $client->request('GET', 'projects/' . $id);
 
         $project = (array)json_decode($response->getBody()->getContents());
-        dd($project);
 
         return view('project.show', [
             "title" =>  "Project",
