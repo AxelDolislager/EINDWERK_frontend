@@ -3,8 +3,8 @@
 @section('content')
     <section class='projectlist'>
         @foreach($projects as $project => $a)
-            {{$project}}
-            {{$a}}
+            {!! $project !!}
+            {!! $a !!}
         @endforeach
         <a href='/project/id' style='background-color: #e74c3c;'>
             <div class='left'>
