@@ -4,6 +4,8 @@
     <section class='projectlist'>
         @foreach($projects as $project)
             {{dd($project->server)}}
+            {{dd($project->type)}}
+            {{dd($project->id)}}
         @endforeach
         {{-- @foreach($projects['data'] as $project => $a)
             {{dd($project)}}
