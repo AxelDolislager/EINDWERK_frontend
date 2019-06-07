@@ -2,8 +2,8 @@
 
 @section('content')
     <section class='projectlist'>
-        @foreach($projects->data as $project)
-            {{$project->id}}
+        @foreach($projects as $project)
+            {{$project}}
         @endforeach
         <a href='/project/id' style='background-color: #e74c3c;'>
             <div class='left'>
