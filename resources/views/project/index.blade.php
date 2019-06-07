@@ -2,6 +2,7 @@
 
 @section('content')
     <section class='projectlist'>
+        {{dd(projects)}}
         @foreach($projects as $project)
             {{$project}}
         @endforeach
