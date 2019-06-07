@@ -13,10 +13,10 @@ class ProjectController extends Controller{
         $projects = (array)json_decode($response->getBody()->getContents());
 
         // dd($response->getBody());
-        dd($projects);
+        dd($projects->data);
 
         return view('project.index', [
-            "projects" => $projects
+            "projects" => $projects->data
         ]);
     }
     public function create(){
