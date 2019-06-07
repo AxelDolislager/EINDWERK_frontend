@@ -2,9 +2,9 @@
 
 @section('content')
     <section class='projectlist'>
-        @foreach($projects as $project => $a)
-            {!! $project !!}
-            {!! $a !!}
+        @foreach($projects['data'] as $project => $a)
+            {{dd($project)}}
+            {{dd($a)}}
         @endforeach
         <a href='/project/id' style='background-color: #e74c3c;'>
             <div class='left'>
