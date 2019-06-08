@@ -3,7 +3,7 @@
 @section('content')
     <section class='projectlist'>
         @foreach($projects as $project)
-    <a href='/project/{{ $project->id }}' style='background-color: {{ $project->attributes->color }};'>
+            <a href='/project/{{ $project->id }}' class='project' style='background-color: {{ $project->attributes->color }};'>
                 <div class='left'>
                     <span class='projecttitle'>{{ $project->attributes->title }}</span>
                     <span class='projecttotals'>{{$project->attributes->completed_todos}} / {{$project->attributes->total_todos}} completed</span>
@@ -16,8 +16,9 @@
                         </span>
                     </div>
                 </div>
-            </div>
+            </a>
         @endforeach
+        <a class="project emptyone"></a>
     </section>
     <div class='bottomaddoverlay'>
         <a href='/project/create' class='addbutton'><i class='fal fa-plus'></i></a>

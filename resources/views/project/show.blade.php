@@ -21,6 +21,7 @@
             </form>
         @endif
         @endforeach
+        <div class="emptyone"></div>
     </section>
     <div class='bottomaddoverlay'>
             <a href='/project/1/todo/create' class='addbutton'><i class='fal fa-plus'></i></a>

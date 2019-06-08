@@ -14,14 +14,15 @@ header .pagetitle{display: block;margin: auto auto auto -50px;font-size: 1.2rem;
 
 .projectlist{width: 100%;height: calc(100% - 50px);overflow-y: scroll;padding: 5px 0px;-ms-overflow-style: none;scrollbar-width: none;}
 .projectlist::-webkit-scrollbar{display: none;}
-.projectlist a{display: flex;padding: 10px 20px;width: 100%;height: 100px;text-decoration: none;color: white;}
-.projectlist a .left{width: 60%;margin: auto;}
-.projectlist a .left .projecttitle{margin-top: 30px;display: block;font-weight: 700;font-size: 1.2rem;}
-.projectlist a .left .projecttotals{display: block;font-weight: 300;font-size: 0.8rem;}
-.projectlist a .right{width: 40%;margin: auto;}
-.projectlist a .right .projectdate{font-size: 0.8rem;text-align: right;margin-top: 52px;}
-.projectlist a .right .projectdate b{display: inline-block;}
-.projectlist a .right .projectdate .projectdatevalue{font-weight: 300;}
+.projectlist a.project{display: flex;padding: 10px 20px;width: 100%;height: 100px;text-decoration: none;color: white;}
+.projectlist a.project .left{width: 60%;margin: auto;}
+.projectlist a.project .left .projecttitle{margin-top: 30px;display: block;font-weight: 700;font-size: 1.2rem;}
+.projectlist a.project .left .projecttotals{display: block;font-weight: 300;font-size: 0.8rem;}
+.projectlist a.project .right{width: 40%;margin: auto;}
+.projectlist a.project .right .projectdate{font-size: 0.8rem;text-align: right;margin-top: 52px;}
+.projectlist a.project .right .projectdate b{display: inline-block;}
+.projectlist a.project .right .projectdate .projectdatevalue{font-weight: 300;}
+.projectlist a.project.emptyone{height: 100px;}
 
 .todolist{width: 100%;height: calc(100% - 50px);overflow-y: scroll;padding: 0px 20px;font-weight: 300;-ms-overflow-style: none;scrollbar-width: none;}
 .todolist::-webkit-scrollbar{display: none;}
@@ -31,6 +32,7 @@ header .pagetitle{display: block;margin: auto auto auto -50px;font-size: 1.2rem;
 .todolist .todo.checked .todobody{color: #9A9A9A;text-decoration: line-through;}
 .todolist .todo.checked .todocircle{background-color: #3BDCBF;}
 .todolist .todo.checked .todocircle i{color: white;margin: auto;font-size: 1.2rem;}
+.todolist .emptyone{height: 100px;width: 100%;}
 
 .bottomaddoverlay{position: absolute;display: flex;bottom: 0;width: 100%;height: 70px;background: rgba(255,255,255,1);background: -moz-linear-gradient(top, rgba(255,255,255,0) 0%, rgba(255,255,255,.40) 40%, rgba(255,255,255,1) 100%);background: -webkit-gradient(left top, left bottom, color-stop(0%, rgba(255,255,255,0)), color-stop(40%, rgba(255,255,255,.40)), color-stop(100%, rgba(255,255,255,1)));background: -webkit-linear-gradient(top, rgba(255,255,255,0) 0%, rgba(255,255,255,.40) 40%, rgba(255,255,255,1) 100%);background: -o-linear-gradient(top, rgba(255,255,255,0) 0%, rgba(255,255,255,.40) 40%, rgba(255,255,255,1) 100%);background: -ms-linear-gradient(top, rgba(255,255,255,0) 0%, rgba(255,255,255,40) 40%, rgba(255,255,255,1) 100%);background: linear-gradient(to bottom, rgba(255,255,255,0) 0%, rgba(255,255,255,40) 40%, rgba(255,255,255,1) 100%);filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', endColorstr='#ffffff', GradientType=0 );}
 .bottomaddoverlay a.addbutton{display: flex;width: 80px;height: 80px;background-color: #5DA2FF;border-radius: 100%;margin: -20px auto auto auto;text-decoration: none;-webkit-box-shadow: 0px 0px 6px 0px rgba(0,0,0,0.3);-moz-box-shadow: 0px 0px 6px 0px rgba(0,0,0,0.3);box-shadow: 0px 0px 6px 0px rgba(0,0,0,0.3);}
