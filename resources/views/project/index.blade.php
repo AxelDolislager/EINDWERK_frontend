@@ -17,11 +17,6 @@
                     </div>
                 </div>
             </div>
-            {{-- {{dd($project->server)}}
-            {{dd($project->type)}}
-            {{dd($project->id)}}
-            {{dd($project->attributes->title)}}
-            {{dd($project->attributes->body)}} --}}
         @endforeach
     </section>
     <div class='bottomaddoverlay'>

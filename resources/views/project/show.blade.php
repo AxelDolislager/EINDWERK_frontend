@@ -3,28 +3,24 @@
 @section('content')
     <section class='todolist'>
         @foreach($project['relationships']->todos->data as $todo)
-            <form action='/project/{{$project['id']}}/todo/{{$todo->id}}' method='post' class='todo' onclick="$(this).submit();">
-                @csrf
-                @method('PUT')
-                <span class='todobody'>Test</span>
-                <span class='todocircle'></span>
-            </form>
-        @endforeach
-        {{-- <form action='/todo/id' method='POST' class='todo' onclick="$(this).submit();">
+        @if($todo->attributes->completed == true)
+        <form action='/project/{{$project['id']}}/todo/{{$todo->id}}' method='post' class='todo checked' onclick="$(this).submit();">
             @csrf
             @method('PUT')
-            <span class='todobody'>Kaka</span>
-            <span class='todocircle'></span>
-        </form>
-
-        <form action='/todo/id' method='POST' class='todo checked'>
-            @csrf
-            @method('PUT')
-            <span class='todobody'>Kaka</span>
+            <span class='todobody'>Test</span>
             <span class='todocircle'>
                 <i class='fal fa-check'></i>
             </span>
-        </form> --}}
+        </form>
+        @else
+            <form action='/project/{{$project['id']}}/todo/{{$todo->id}}' method='post' class='todo' onclick="$(this).submit();">
+                @csrf
+                @method('PUT')
+                <span class='todobody'>{{$todo->attributes->title}}</span>
+                <span class='todocircle'></span>
+            </form>
+        @endif
+        @endforeach
     </section>
     <div class='bottomaddoverlay'>
             <a href='/project/1/todo/create' class='addbutton'><i class='fal fa-plus'></i></a>
