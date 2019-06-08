@@ -12,7 +12,7 @@
                     <div class='projectdate'>
                         <span>created at</span>
                         <span class='projectdatavalue'>
-                            20/05/2019
+                            {{ date('d/m/Y', strtotime($project->attributes->created_at)) }}
                         </span>
                     </div>
                 </div>
