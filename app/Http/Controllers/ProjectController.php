@@ -22,7 +22,16 @@ class ProjectController extends Controller{
             "previous_page" => "/",
         ]);
     }
-    public function store(Request $request){}
+    public function store(Request $request){
+        $client = new Client(['base_uri' => env('BACKEND_SERVER_URL')]);
+        $response = $client->request('POST', 'projects', [
+            'form_params' => [
+                'title' => $request->title,
+                'color' => $request->color,
+            ],
+        ]);
+        return redirect('/project');
+    }
     public function show($id){
         $client = new Client(['base_uri' => env('BACKEND_SERVER_URL')]);
         $response = $client->request('GET', 'projects/' . $id);

@@ -3,10 +3,10 @@
 @section('content')
     <section class='projectlist'>
         @foreach($projects as $project)
-            <a href='/project/{{ $project->id }}' style='background-color: green;'>
+    <a href='/project/{{ $project->id }}' style='background-color: {{ $project->attributes->color }};'>
                 <div class='left'>
                     <span class='projecttitle'>{{ $project->attributes->title }}</span>
-                    <span class='projecttotals'>0 / ? completed</span>
+                    <span class='projecttotals'>{{$project->attributes->completed_todos}} / {{$project->attributes->total_todos}} completed</span>
                 </div>
                 <div class='right'>
                     <div class='projectdate'>
