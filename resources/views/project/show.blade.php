@@ -7,7 +7,7 @@
         <form action='/project/{{$project['id']}}/todo/{{$todo->id}}' method='post' class='todo checked' onclick="$(this).submit();">
             @csrf
             @method('PUT')
-            <span class='todobody'>Test</span>
+            <span class='todobody'>{{$todo->attributes->title}}</span>
             <span class='todocircle'>
                 <i class='fal fa-check'></i>
             </span>

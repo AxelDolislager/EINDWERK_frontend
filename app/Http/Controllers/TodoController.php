@@ -26,6 +26,10 @@ class TodoController extends Controller{
     }
     public function show($id){}
     public function edit($id){}
-    public function update(Request $request, $id){}
+    public function update(Request $request, $projectid, $todoid){
+        $client = new Client(['base_uri' => env('BACKEND_SERVER_URL')]);
+        $response = $client->request('PUT', 'todos/' . $todoid);
+        return redirect('/project/' . $projectid);
+    }
     public function destroy($id){}
 }
