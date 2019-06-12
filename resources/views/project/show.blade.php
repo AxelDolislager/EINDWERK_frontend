@@ -24,6 +24,6 @@
         <div class="emptyone"></div>
     </section>
     <div class='bottomaddoverlay'>
-            <a href='/project/1/todo/create' class='addbutton'><i class='fal fa-plus'></i></a>
-        </div>
+        <a href='/project/{{$project['id']}}/todo/create' class='addbutton'><i class='fal fa-plus'></i></a>
+    </div>
 @endsection
