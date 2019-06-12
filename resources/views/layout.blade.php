@@ -8,6 +8,11 @@
         <script src="/js/jquery-3.4.1.min.js"></script>
     </head>
     <body>
+        @if(isset($backend_server))
+        <div class="serverinfo">
+            Data verkregen via: <b>{{$backend_server}}</b>
+        </div>
+        @endif
         <main>
             <header>
                 @if(isset($pagetitle))
